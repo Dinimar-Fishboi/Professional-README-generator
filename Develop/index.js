@@ -7,29 +7,30 @@ const generateMarkdown = require('./utils/generateMarkdown')
 const questions = [
     {
         type: 'input',
-        message: 'What is your name?',
-        name: 'name',
+        message: 'What is the title of your Project?',
+        name: 'title',
       },
-{
-  type: 'input',
-  message: 'Please enter your Git URL',
-  name: 'GitHub',
-},
-{
-  type: 'input',
-  message: 'Please enter you LinkedIn URL',
-  name: 'LinkedIn',
-},
-{
-  type: 'input',
-  message: 'This is the About me Section',
-  name: 'Bio',
-},
-{
-  type: 'input',
-  message: 'Where are you from?',
-  name: 'Location',
-},
+    {
+        type: 'input',
+        message: 'What was the motivation for the project?',
+        name: 'motivation',
+        },
+    {
+        type: 'input',
+        message: 'Why did you build this project?',
+        name: 'purpose',
+        },
+    {
+        type: 'input',
+        message: 'What problem does this solve?',
+        name: 'problemSolve',
+        },
+    {
+        type: 'input',
+        message: 'What are the steps required to install your project?',
+        name: 'installation',
+        },
+    
 
 ];
 
@@ -44,6 +45,8 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
+    console.log('Please answer as many questions as possible for your README file to stand out')
+
     inquirer.prompt(questions)
     .then(function (newInput) {
       console.log(newInput)
