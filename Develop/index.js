@@ -30,7 +30,32 @@ const questions = [
         message: 'What are the steps required to install your project?',
         name: 'installation',
         },
-    
+    {
+        type: 'checkbox',
+        message: "Which licence would you like to use? (If you're unsure, google it)",
+        name: 'licensing',
+        choices: ['Apache', 'MIT', 'Mozilla-Public', 'GNU-General-Public', 'Common-Development-and Distribution', 'None']
+        },
+    {
+        type: 'input',
+        message: 'How do people contribute to your project?',
+        name: 'contribution',
+        },
+    {
+        type: 'input',
+        message: 'How can your application be tested?',
+        name: 'test',
+        },
+    {
+        type: 'input',
+        message: 'Add your GitHub URL',
+        name: 'github',
+        },
+    {
+        type: 'input',
+        message: 'Add your email',
+        name: 'email',
+        },
 
 ];
 
