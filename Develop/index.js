@@ -12,49 +12,49 @@ const questions = [
       },
     {
         type: 'input',
-        message: 'What was the motivation for the project?',
-        name: 'motivation',
+        message: 'Please add a description',
+        name: 'description',
         },
     {
         type: 'input',
-        message: 'Why did you build this project?',
-        name: 'purpose',
-        },
-    {
-        type: 'input',
-        message: 'What problem does this solve?',
-        name: 'problemSolve',
-        },
-    {
-        type: 'input',
-        message: 'What are the steps required to install your project?',
+        message: 'How does the user install the program?',
         name: 'installation',
+        },
+    {
+        type: 'input',
+        message: 'How does the user, you know, USE the program?',
+        name: 'useage',
+        },
+    {
+        type: 'input',
+        message: 'How do you contribute to this project?',
+        name: 'contributing',
+        },
+    {
+        type: 'input',
+        message: 'What tests were run to check this project?',
+        name: 'tests',
         },
     {
         type: 'checkbox',
         message: "Which licence would you like to use? (If you're unsure, google it)",
-        name: 'licensing',
-        choices: ['Apache', 'MIT', 'Mozilla-Public', 'GNU-General-Public', 'Common-Development-and Distribution', 'None']
+        name: 'license',
+        choices: ['Apache Licence', 'MIT Licence', 'Mozilla-Public Licence', 'GNU-General-Public Licence', 'Common-Development-and Distribution Licence', 'None']
         },
     {
         type: 'input',
-        message: 'How do people contribute to your project?',
-        name: 'contribution',
-        },
-    {
-        type: 'input',
-        message: 'How can your application be tested?',
-        name: 'test',
-        },
-    {
-        type: 'input',
-        message: 'Add your GitHub URL',
+        message: 'Add your GitHub URL (this is so people can contact you about your project)',
         name: 'github',
         },
     {
         type: 'input',
-        message: 'Add your email',
+        message: 'Add your email (this is so people can contact you about your project)',
         name: 'email',
+        },
+    {
+        type: 'input',
+        message: 'Pleae type your full name/name of your organisation for Copyright purposes',
+        name: 'name',
         },
 
 ];
@@ -70,14 +70,15 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    console.log('Please answer as many questions as possible for your README file to stand out')
-
+    console.log('Please answer all questions. We recommend editing it before pasting it in the command line')
     inquirer.prompt(questions)
     .then(function (newInput) {
       console.log(newInput)
       writeToFile("README.md", generateMarkdown(newInput));
-    });
+    }); 
 }
+
+
 
 // Function call to initialize app
 init();

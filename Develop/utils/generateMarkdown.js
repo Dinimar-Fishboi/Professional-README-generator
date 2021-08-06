@@ -15,31 +15,53 @@ function generateMarkdown(data) {
   return `# ${data.title}
 
 ## Description
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-- What was your motivation? ${data.motivation}
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.") ${data.purpose}
-- What problem does it solve? ${data.problemSolve}
-- What did you learn? ${data.learn}
+
+${data.description}
 
 ## Table of Contents 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 - [License](#license)
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
 ${data.installation}
 
-## Credits
-List your collaborators, if any, with links to their GitHub profiles.
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-If you followed tutorials, include links to those here as well.
-## License
+## Usage
 
-  
+${data.usage}
+
+## Testing
+
+${data.installation}
+
+## Contributing
+
+${data.contributing}
+
+## Tests
+
+${data.tests}
+
+## Questions
+
+If you have any questions, please reach out to me.
+
+- [GitHub](#${data.github})
+- [Email](#${data.email})
+
+## License and Copyright
+
+ © ${data.name},
+
+Licensed under the [${data.license}](LICENSE).
+
 `;
 }
+
+
 
 module.exports = generateMarkdown;
