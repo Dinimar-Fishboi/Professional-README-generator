@@ -58,7 +58,7 @@ If you have any questions, please reach out to me.
 
 ## License and Copyright
 
- © ${data.name},
+ © ${data.name}, ${data.year}
 
 Licensed under the [${data.license[3]}](LICENSE).
 
