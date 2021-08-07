@@ -4,57 +4,80 @@ const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown')
 const renderLicenseLink = require('./utils/generateLicense')
 
+// This function ensures that the user enters some form of input when running the
+// command line. Function not required for expanded license question.
+
+
+const confirmInput = (value) => {
+    if (value){
+        return true;
+    } else {
+        console.log("Please answer the question or enter a keysmash");
+        return false;
+    }
+}
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
         message: 'What is the title of your Project?',
         name: 'title',
+        validate: confirmInput,
       },
     {
         type: 'input',
         message: 'Please add a description',
         name: 'description',
+        validate: confirmInput,
         },
     {
         type: 'input',
         message: 'How does the user install the program?',
         name: 'installation',
+        validate: confirmInput,
         },
     {
         type: 'input',
         message: 'How does the user, you know, USE the program?',
         name: 'usage',
+        validate: confirmInput,
         },
     {
         type: 'input',
         message: 'How do you contribute to this project?',
         name: 'contributing',
+        validate: confirmInput,
         },
     {
         type: 'input',
         message: 'What tests were run to check this project?',
         name: 'tests',
+        validate: confirmInput,
         },
     {
         type: 'input',
         message: 'Add your full GitHub URL (this is so people can contact you about your project)',
         name: 'github',
+        validate: confirmInput,
         },
     {
         type: 'input',
         message: 'Add your full email (this is so people can contact you about your project)',
         name: 'email',
+        validate: confirmInput,
         },
     {
         type: 'input',
         message: 'Pleae type your full name/name of your organisation for Copyright purposes',
         name: 'name',
+        validate: confirmInput,
         },
     {
         type: 'input',
         message: "We're also going to need the year/s this project was created for Copyright purposes. If it stretches over multiple years please use the following format: 'FirstYear-FinalYear",
         name: 'year',
+        validate: confirmInput,
         },
     {
         type: 'expand',
