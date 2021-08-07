@@ -41,15 +41,14 @@ ${data.tests}
 
 If you have any questions, please reach out to me.
 
-- [GitHub](#${data.github})
-- [Email](#${data.email})
+- [${data.github}](#${data.github})
+- [${data.email}](#${data.email})
 
 ## License and Copyright
 
  © ${data.name}, ${data.year}
 
 Licensed under the [${data.license[3]}](LICENSE).
-
 
 `;
 }

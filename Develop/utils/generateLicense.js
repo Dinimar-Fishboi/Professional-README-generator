@@ -1,7 +1,6 @@
 function renderLicenseLink(data) {
     if (data.license[3] === "Apache License, Version 2.0"){
-    return `# ${data.title}
-  
+    return `
     Copyright ${data.year} ${data.name}
 
     Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,8 +19,7 @@ function renderLicenseLink(data) {
     `
     }
     else if (data.license[3] === "MIT License"){
-      return `# ${data.title}
-    
+      return `
     Copyright ${data.year} ${data.name}
 
     Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -30,7 +28,6 @@ function renderLicenseLink(data) {
 
     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       
-    
       `
       }
     else if (data.license[3] ===  "Mozilla Public License 2.0"){
@@ -39,14 +36,12 @@ function renderLicenseLink(data) {
     This Source Code Form is subject to the terms of the Mozilla Public
     License, v. 2.0. If a copy of the MPL was not distributed with this
     file, You can obtain one at https://mozilla.org/MPL/2.0/.
-    
-    
+
     `
     }
     else if (data.license[3] === "GNU General Public License version 3"){
-        return `# ${data.title}
-    
-    
+        return `
+    ${data.title}
     Copyright (C) ${data.year} ${data.name}
 
     This program is free software: you can redistribute it and/or modify
@@ -62,7 +57,6 @@ function renderLicenseLink(data) {
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
         
-    
         `
         }
   }

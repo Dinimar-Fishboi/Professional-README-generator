@@ -6,46 +6,46 @@ const renderLicenseLink = require('./utils/generateLicense')
 
 // TODO: Create an array of questions for user input
 const questions = [
-    // {
-    //     type: 'input',
-    //     message: 'What is the title of your Project?',
-    //     name: 'title',
-    //   },
-    // {
-    //     type: 'input',
-    //     message: 'Please add a description',
-    //     name: 'description',
-    //     },
-    // {
-    //     type: 'input',
-    //     message: 'How does the user install the program?',
-    //     name: 'installation',
-    //     },
-    // {
-    //     type: 'input',
-    //     message: 'How does the user, you know, USE the program?',
-    //     name: 'usage',
-    //     },
-    // {
-    //     type: 'input',
-    //     message: 'How do you contribute to this project?',
-    //     name: 'contributing',
-    //     },
-    // {
-    //     type: 'input',
-    //     message: 'What tests were run to check this project?',
-    //     name: 'tests',
-    //     },
-    // {
-    //     type: 'input',
-    //     message: 'Add your full GitHub URL (this is so people can contact you about your project)',
-    //     name: 'github',
-    //     },
-    // {
-    //     type: 'input',
-    //     message: 'Add your full email (this is so people can contact you about your project)',
-    //     name: 'email',
-    //     },
+    {
+        type: 'input',
+        message: 'What is the title of your Project?',
+        name: 'title',
+      },
+    {
+        type: 'input',
+        message: 'Please add a description',
+        name: 'description',
+        },
+    {
+        type: 'input',
+        message: 'How does the user install the program?',
+        name: 'installation',
+        },
+    {
+        type: 'input',
+        message: 'How does the user, you know, USE the program?',
+        name: 'usage',
+        },
+    {
+        type: 'input',
+        message: 'How do you contribute to this project?',
+        name: 'contributing',
+        },
+    {
+        type: 'input',
+        message: 'What tests were run to check this project?',
+        name: 'tests',
+        },
+    {
+        type: 'input',
+        message: 'Add your full GitHub URL (this is so people can contact you about your project)',
+        name: 'github',
+        },
+    {
+        type: 'input',
+        message: 'Add your full email (this is so people can contact you about your project)',
+        name: 'email',
+        },
     {
         type: 'input',
         message: 'Pleae type your full name/name of your organisation for Copyright purposes',
@@ -122,13 +122,11 @@ function init() {
     inquirer.prompt(questions)
     .then(function (newInput) {
       console.log(newInput)
-      writeToFile("README4.md", generateMarkdown(newInput));
-      writeToFile("LICENSE4", renderLicenseLink(newInput));
+      writeToFile("README.md", generateMarkdown(newInput));
+      writeToFile("LICENSE", renderLicenseLink(newInput));
  
     }); 
 }
-
-
 
 // Function call to initialize app
 init();
