@@ -70,7 +70,8 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    console.log('Please answer all questions. We recommend editing it before pasting it in the command line')
+    console.log('Please answer all questions. We recommend editing it before pasting it in the command line.')
+    console.log("ALSO: if you DON'T want to use some of the sections in this handy template; just do a keysmash and remove the bit you don't want later.")
     inquirer.prompt(questions)
     .then(function (newInput) {
       console.log(newInput)

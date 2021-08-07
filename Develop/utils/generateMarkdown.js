@@ -59,6 +59,7 @@ If you have any questions, please reach out to me.
 
 Licensed under the [${data.license}](LICENSE).
 
+
 `;
 }
 
