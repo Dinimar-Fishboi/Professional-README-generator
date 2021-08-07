@@ -39,7 +39,7 @@ const questions = [
         type: 'checkbox',
         message: "Which licence would you like to use? (If you're unsure, google it)",
         name: 'license',
-        choices: ['Apache Licence', 'MIT Licence', 'Mozilla-Public Licence', 'GNU-General-Public Licence', 'Common-Development-and Distribution Licence', 'None']
+        choices: ['Apache-2.0', 'MIT', 'Mozilla-Public', 'GNU-General-Public', 'Common-Development-and Distribution',]
         },
     {
         type: 'input',
