@@ -14,7 +14,7 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title}
 
-[![License](https://img.shields.io/badge/License-${data.license[1]})](https://opensource.org/licenses/Apache-2.0)
+[![License: ${data.license[0]}](https://img.shields.io/badge/License-${data.license[1]})](https://opensource.org/licenses/${data.license[2]})
 
 ## Description
 
@@ -60,7 +60,7 @@ If you have any questions, please reach out to me.
 
  © ${data.name},
 
-Licensed under the [${data.license} License](LICENSE).
+Licensed under the [${data.license[3]}](LICENSE).
 
 
 `;

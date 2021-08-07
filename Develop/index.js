@@ -50,18 +50,24 @@ const questions = [
     //     message: 'Pleae type your full name/name of your organisation for Copyright purposes',
     //     name: 'name',
     //     },
+    // {
+    //     type: 'input',
+    //     message: "We're also going to need the year/s this project was created for Copyright purposes. If it stretches over multiple years please use the following format: 'FirstYear-FinalYear",
+    //     name: 'year',
+    //     },
     {
         type: 'expand',
-        message: "Which licence would you like to use? (If you're unsure, google it)",
+        message: "You should have a license. Hit 'H' to see all the license options (If you're unsure which one to use, google it)",
         name: 'license',
         choices: [
             {
                 key: 'a',
-                name: 'Apache-2.0',
+                name: 'Apache License, Version 2.0',
                 value: [
                     "Apache-2.0",
                     "Apache%202.0-blue.svg",
-                    "Apache License, Version 2.0"
+                    "Apache-2.0",
+                    "Apache License, Version 2.0",
                 ]
         },
             {
@@ -70,44 +76,31 @@ const questions = [
                 value: [
                     "MIT",
                     "MIT-yellow.svg",
-                    "MIT License"
+                    "MIT",
+                    "MIT License",
                 ]
         },
             {
                 key: 'c',
                 name: 'Mozilla Public License 2.0',
                 value: [
-                    "MPL-2.0",
+                    "MPL 2.0",
                     "MPL%202.0-brightgreen.svg",
-                    "AMozilla Public License 2.0"
+                    "MPL-2.0",
+                    "Mozilla Public License 2.0"
                 ]
         },
             {
                 key: 'd',
                 name: 'GNU General Public License version 3',
                 value: [
-                    "Apache-2.0",
-                    "AGPL%20v3-blue.svg",
-                    "Apache License, Version 2.0"
-                ]
-            },
-            {
-                key: 'e',
-                name: 'Fifth license option',
-                value: [
-                    "Apache-2.0",
-                    "AGPL%20v3-blue.svg",
-                    "Apache License, Version 2.0"
+                    "GPL v3",
+                    "GPL%20v2-blue.svg",
+                    "gpl-3.0",
+                    "GNU General Public License version 3"
                 ]
             },
         ],
-        // validate(text) {
-        //     if (text === this.choices[0]) {
-        //         this.shorthand === 'Apache-2.0';
-        //         this.web === 'Apache%202'
-        //     }
-
-        // }
         },
 
 ];
@@ -132,6 +125,7 @@ function init() {
       console.log(newInput.license[1])
       writeToFile("README.md", generateMarkdown(newInput));
       
+ 
     }); 
 }
 
