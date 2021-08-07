@@ -2,59 +2,60 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown')
+const renderLicenseLink = require('./utils/generateLicense')
 
 // TODO: Create an array of questions for user input
 const questions = [
-    {
-        type: 'input',
-        message: 'What is the title of your Project?',
-        name: 'title',
-      },
-    {
-        type: 'input',
-        message: 'Please add a description',
-        name: 'description',
-        },
-    {
-        type: 'input',
-        message: 'How does the user install the program?',
-        name: 'installation',
-        },
-    {
-        type: 'input',
-        message: 'How does the user, you know, USE the program?',
-        name: 'usage',
-        },
-    {
-        type: 'input',
-        message: 'How do you contribute to this project?',
-        name: 'contributing',
-        },
-    {
-        type: 'input',
-        message: 'What tests were run to check this project?',
-        name: 'tests',
-        },
-    {
-        type: 'input',
-        message: 'Add your full GitHub URL (this is so people can contact you about your project)',
-        name: 'github',
-        },
-    {
-        type: 'input',
-        message: 'Add your full email (this is so people can contact you about your project)',
-        name: 'email',
-        },
-    {
-        type: 'input',
-        message: 'Pleae type your full name/name of your organisation for Copyright purposes',
-        name: 'name',
-        },
-    {
-        type: 'input',
-        message: "We're also going to need the year/s this project was created for Copyright purposes. If it stretches over multiple years please use the following format: 'FirstYear-FinalYear",
-        name: 'year',
-        },
+    // {
+    //     type: 'input',
+    //     message: 'What is the title of your Project?',
+    //     name: 'title',
+    //   },
+    // {
+    //     type: 'input',
+    //     message: 'Please add a description',
+    //     name: 'description',
+    //     },
+    // {
+    //     type: 'input',
+    //     message: 'How does the user install the program?',
+    //     name: 'installation',
+    //     },
+    // {
+    //     type: 'input',
+    //     message: 'How does the user, you know, USE the program?',
+    //     name: 'usage',
+    //     },
+    // {
+    //     type: 'input',
+    //     message: 'How do you contribute to this project?',
+    //     name: 'contributing',
+    //     },
+    // {
+    //     type: 'input',
+    //     message: 'What tests were run to check this project?',
+    //     name: 'tests',
+    //     },
+    // {
+    //     type: 'input',
+    //     message: 'Add your full GitHub URL (this is so people can contact you about your project)',
+    //     name: 'github',
+    //     },
+    // {
+    //     type: 'input',
+    //     message: 'Add your full email (this is so people can contact you about your project)',
+    //     name: 'email',
+    //     },
+    // {
+    //     type: 'input',
+    //     message: 'Pleae type your full name/name of your organisation for Copyright purposes',
+    //     name: 'name',
+    //     },
+    // {
+    //     type: 'input',
+    //     message: "We're also going to need the year/s this project was created for Copyright purposes. If it stretches over multiple years please use the following format: 'FirstYear-FinalYear",
+    //     name: 'year',
+    //     },
     {
         type: 'expand',
         message: "You should have a license. Hit 'H' to see all the license options (If you're unsure which one to use, google it)",
@@ -116,15 +117,13 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    console.log(questions[9]);
     console.log('Please answer all questions. We recommend editing it before pasting it in the command line.')
     console.log("ALSO: if you DON'T want to use some of the sections in this handy template; just do a keysmash and remove the bit you don't want later.")
     inquirer.prompt(questions)
     .then(function (newInput) {
       console.log(newInput)
-      console.log(newInput.license[1])
       writeToFile("README.md", generateMarkdown(newInput));
-      
+      writeToFile("LICENSE", renderLicenseLink(newInput));
  
     }); 
 }
