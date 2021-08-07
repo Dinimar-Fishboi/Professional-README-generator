@@ -44,7 +44,7 @@ If you have any questions, please reach out to me.
 
 ## License and Copyright
 
- © undefined, undefined
+ © Charlie's angels, 1884
 
 Licensed under the [Mozilla Public License 2.0](LICENSE).
 

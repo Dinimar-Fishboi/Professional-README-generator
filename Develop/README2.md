@@ -44,7 +44,7 @@ If you have any questions, please reach out to me.
 
 ## License and Copyright
 
- © undefined, undefined
+ © Bravado Brigade, 2044
 
 Licensed under the [MIT License](LICENSE).
 

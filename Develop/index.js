@@ -46,16 +46,16 @@ const questions = [
     //     message: 'Add your full email (this is so people can contact you about your project)',
     //     name: 'email',
     //     },
-    // {
-    //     type: 'input',
-    //     message: 'Pleae type your full name/name of your organisation for Copyright purposes',
-    //     name: 'name',
-    //     },
-    // {
-    //     type: 'input',
-    //     message: "We're also going to need the year/s this project was created for Copyright purposes. If it stretches over multiple years please use the following format: 'FirstYear-FinalYear",
-    //     name: 'year',
-    //     },
+    {
+        type: 'input',
+        message: 'Pleae type your full name/name of your organisation for Copyright purposes',
+        name: 'name',
+        },
+    {
+        type: 'input',
+        message: "We're also going to need the year/s this project was created for Copyright purposes. If it stretches over multiple years please use the following format: 'FirstYear-FinalYear",
+        name: 'year',
+        },
     {
         type: 'expand',
         message: "You should have a license. Hit 'H' to see all the license options (If you're unsure which one to use, google it)",

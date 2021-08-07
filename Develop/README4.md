@@ -44,7 +44,7 @@ If you have any questions, please reach out to me.
 
 ## License and Copyright
 
- © undefined, undefined
+ © Delta force, 2020
 
 Licensed under the [GNU General Public License version 3](LICENSE).
 

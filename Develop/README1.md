@@ -44,7 +44,7 @@ If you have any questions, please reach out to me.
 
 ## License and Copyright
 
- © undefined, undefined
+ © The Alpha Agency, 2032
 
 Licensed under the [Apache License, Version 2.0](LICENSE).
 
