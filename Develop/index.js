@@ -122,8 +122,8 @@ function init() {
     inquirer.prompt(questions)
     .then(function (newInput) {
       console.log(newInput)
-      writeToFile("README.md", generateMarkdown(newInput));
-      writeToFile("LICENSE", renderLicenseLink(newInput));
+      writeToFile("README4.md", generateMarkdown(newInput));
+      writeToFile("LICENSE4", renderLicenseLink(newInput));
  
     }); 
 }
