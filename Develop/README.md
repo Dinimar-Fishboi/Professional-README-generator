@@ -17,7 +17,7 @@ When creating an open source project on GitHub, it’s important to have a high-
 
 ## Installation
 
-To install this program; clone this repository to your PC, initialise npm in your new repo (instructions [here](# https://docs.npmjs.com/cli/v6/commands/npm-init)), then install the inquirer package (instructions on that [here](# https://www.npmjs.com/package/inquirer)).
+To install this program; clone this repository to your PC, initialise npm in your new repo (instructions [here](https://docs.npmjs.com/cli/v6/commands/npm-init)), then install the inquirer package (instructions on that [here](https://www.npmjs.com/package/inquirer)).
 
 ## Usage
 
