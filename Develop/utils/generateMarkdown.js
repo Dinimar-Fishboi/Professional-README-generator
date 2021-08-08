@@ -25,7 +25,7 @@ ${data.installation}
 
 ${data.usage}
 
-## Test
+## Tests
 
 ${data.tests}
 

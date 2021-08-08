@@ -27,7 +27,7 @@ const questions = [
       },
     {
         type: 'input',
-        message: 'Please add a description',
+        message: 'What would you like in the description section?',
         name: 'description',
         validate: confirmInput,
         },
@@ -42,6 +42,12 @@ const questions = [
         message: 'How does the user, you know, USE the program?',
         name: 'usage',
         validate: confirmInput,
+        },   
+    {
+        type: 'input',
+        message: 'How can this user test this project?',
+        name: 'tests',
+        validate: confirmInput,
         },
     {
         type: 'input',
@@ -51,37 +57,31 @@ const questions = [
         },
     {
         type: 'input',
-        message: 'What tests were run to check this project?',
-        name: 'tests',
-        validate: confirmInput,
-        },
-    {
-        type: 'input',
-        message: 'Add your full GitHub URL (this is so people can contact you about your project)',
+        message: 'What is your full GitHub URL (this is so people can contact you about your project)?',
         name: 'github',
         validate: confirmInput,
         },
     {
         type: 'input',
-        message: 'Add your full email (this is so people can contact you about your project)',
+        message: 'What is your email (aka another way for people to contact you about your project)?',
         name: 'email',
         validate: confirmInput,
         },
     {
         type: 'input',
-        message: 'Pleae type your full name/name of your organisation for Copyright purposes',
+        message: 'What is your full name/name of your organisation (for Copyright purposes)?',
         name: 'name',
         validate: confirmInput,
         },
     {
         type: 'input',
-        message: "We're also going to need the year/s this project was created for Copyright purposes. If it stretches over multiple years please use the following format: 'FirstYear-FinalYear",
+        message: "Can you please provide the year/s this project was created (also for Copyright purposes)?. If it stretches over multiple years please use the following format: 'FirstYear-FinalYear",
         name: 'year',
         validate: confirmInput,
         },
     {
         type: 'expand',
-        message: "You should have a license. Hit 'H' to see all the license options (If you're unsure which one to use, google it)",
+        message: "Please select a license option. Hit 'H' and then 'enter' to see all the license options (If you're unsure which one to use, google it)",
         name: 'license',
         choices: [
             {
