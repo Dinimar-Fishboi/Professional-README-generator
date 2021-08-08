@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown')
-const renderLicenseLink = require('./utils/generateLicense')
+const renderLicense = require('./utils/generateLicense')
 
 // This function ensures that the user enters some form of input when running the
 // command line. Function not required for expanded license question.
@@ -146,7 +146,7 @@ function init() {
     .then(function (newInput) {
       console.log(newInput)
       writeToFile("README.md", generateMarkdown(newInput));
-      writeToFile("LICENSE", renderLicenseLink(newInput));
+      writeToFile("LICENSE", renderLicense(newInput));
  
     }); 
 }

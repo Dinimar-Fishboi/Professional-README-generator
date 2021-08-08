@@ -1,4 +1,4 @@
-function renderLicenseLink(data) {
+function renderLicense(data) {
     if (data.license[3] === "Apache License, Version 2.0"){
     return `
     Copyright ${data.year} ${data.name}
@@ -61,4 +61,4 @@ function renderLicenseLink(data) {
         }
   }
 
-  module.exports = renderLicenseLink;
+  module.exports = renderLicense;

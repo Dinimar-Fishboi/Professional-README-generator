@@ -25,17 +25,13 @@ ${data.installation}
 
 ${data.usage}
 
-## Testing
+## Test
 
-${data.installation}
+${data.tests}
 
 ## Contributing
 
 ${data.contributing}
-
-## Tests
-
-${data.tests}
 
 ## Questions
 
