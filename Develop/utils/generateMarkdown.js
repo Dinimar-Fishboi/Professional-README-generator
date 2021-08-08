@@ -35,7 +35,7 @@ ${data.contributing}
 
 ## Questions
 
-If you have any questions, please reach out to me.
+If you have any questions, please reach out.
 
 - [${data.github}](${data.github})
 - [${data.email}](#${data.email})
