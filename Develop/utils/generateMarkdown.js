@@ -37,7 +37,7 @@ ${data.contributing}
 
 If you have any questions, please reach out to me.
 
-- [${data.github}](#${data.github})
+- [${data.github}](${data.github})
 - [${data.email}](#${data.email})
 
 ## License and Copyright
