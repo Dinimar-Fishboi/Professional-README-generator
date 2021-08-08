@@ -30,7 +30,7 @@ When creating an open source project on GitHub, it’s important to have a high-
 
 ## Installation
 
-To install this program; clone this repository to your PC, initialise npm in your new repo (instructions [here](https://docs.npmjs.com/cli/v6/commands/npm-init)), then install the inquirer package (instructions on that [here](https://www.npmjs.com/package/inquirer)).
+To install this program; clone this repository to your PC, navigate to the Develop folder and initialise npm in your new repo (instructions [here](https://docs.npmjs.com/cli/v6/commands/npm-init)), then install the inquirer package (instructions on that [here](https://www.npmjs.com/package/inquirer)).
 
 ## Usage
 
@@ -50,7 +50,7 @@ To contribute to this project, please fork the file; edit as desired and submit 
 
 ## Questions
 
-If you have any questions, please reach out to me.
+If you have any questions, please reach out to us.
 
 - [https://github.com/Dinimar-Fishboi](https://github.com/Dinimar-Fishboi)
 - [dev.fish.studio@protonmail.com](#dev.fish.studio@protonmail.com)
