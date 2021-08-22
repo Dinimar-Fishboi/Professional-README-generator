@@ -51,12 +51,6 @@ const questions = [
         },
     {
         type: 'input',
-        message: 'How do you contribute to this project?',
-        name: 'contributing',
-        validate: confirmInput,
-        },
-    {
-        type: 'input',
         message: 'What is your full GitHub URL (this is so people can contact you about your project)?',
         name: 'github',
         validate: confirmInput,
@@ -130,7 +124,7 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+const writeToFile = (fileName, data) => {
     fs.writeFile(fileName, data, (err) => {
         if (err)
           throw err;
@@ -143,12 +137,12 @@ function init() {
     console.log('Please answer all questions. We recommend editing it before pasting it in the command line.')
     console.log("ALSO: if you DON'T want to use some of the sections in this handy template; just do a keysmash and remove the bit you don't want later.")
     inquirer.prompt(questions)
-    .then(function (newInput) {
+    .then((newInput => {
       console.log(newInput)
       writeToFile("README.md", generateMarkdown(newInput));
       writeToFile("LICENSE", renderLicense(newInput));
- 
-    }); 
+    
+    })); 
 }
 
 // Function call to initialize app

@@ -8,14 +8,15 @@ function generateMarkdown(data) {
 
 ${data.description}
 
+## Deployed Link and Screenshots
 
 ## Table of Contents 
+- [Technologies](#technologies)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
-- [License](#license)
+- [License](#license-and-copyright)
 
 ## Installation
 
@@ -28,10 +29,6 @@ ${data.usage}
 ## Tests
 
 ${data.tests}
-
-## Contributing
-
-${data.contributing}
 
 ## Questions
 
